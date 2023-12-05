@@ -16,7 +16,12 @@
     <h1 class="heading">
       <span class="span-1">MEMORY</span><span class="span-2">GAME</span>
     </h1>
-    <div class="cards-container">
+    <!-- <div class="play-button">
+      <button onclick="playClicked()">PLAY</button>
+      <p>THIS GAME WAS MADE USING HTML CSS JS.</p>
+    </div> -->
+
+    <div class="cards-container play">
       <div class="card" data-image="csk">
         <img src="./pics/csk.png" class="front" />
         <img src="./pics/logo2.png" class="back" alt="" />
@@ -97,6 +102,7 @@
         <img src="./pics/rr.png" class="front" />
         <img src="./pics/logo2.png" class="back" alt="" />
       </div>
+      <button class="reset-button" onclick="reset()">RESET</button>
     </div>
     <script src="./cardsgame.js"></script>
   </body>

@@ -32,7 +32,6 @@ body {
 .cards-container {
   height: 60vh;
   width: 35vw;
-  /* background-color: aliceblue; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +46,7 @@ body {
   background-color: rgba(0, 0, 0, 0.491);
   height: 23%;
   width: 18%;
-  border-radius: 3px;
+  border-radius: 4px;
   position: relative;
   transform-style: preserve-3d;
   transition: all 0.3s ease-in-out;
@@ -55,11 +54,12 @@ body {
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
+
 img {
   position: absolute;
   height: 60px;
@@ -79,4 +79,80 @@ img {
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
+}
+/* .play {
+  display: none;
+} */
+.play-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.play-button button {
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Press Start 2P";
+  font-size: 32px;
+  border: none;
+  margin-bottom: 16px;
+  transition: all 0.15s ease;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+}
+.play-button button:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+.play-button button:active {
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -moz-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  -o-transform: scale(0.97);
+}
+.play-button p {
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  color: antiquewhite;
+  margin-top: 16px;
+}
+.reset-button {
+  padding: 6px;
+  border-radius: 6px;
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  border: none;
+  margin-top: 16px;
+  transition: all 0.15s ease;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+}
+.reset-button:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+}
+.reset-button:active {
+  transform: scale(0.97);
+  -webkit-transform: scale(0.97);
+  -moz-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  -o-transform: scale(0.97);
 }

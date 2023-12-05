@@ -1,4 +1,6 @@
 let cards = document.querySelectorAll(".card");
+// let playButton = document.querySelector(".play-button");
+// let cardsContainer = document.querySelector(".cards-container");
 
 let isFirst = true;
 let firstCard;
@@ -35,3 +37,23 @@ function check() {
     }, 600);
   }
 }
+
+// function playClicked() {
+//   playButton.classList.add("play");
+//   playButton.classList.remove("play-button");
+//   cardsContainer.classList.remove("play");
+// }
+
+(function shuffle() {
+  cards.forEach((c) => {
+    let num = Math.floor(Math.random() * 20);
+    c.Style.order = num;
+  });
+})();
+
+// function reset() {
+//   isFirst = true;
+//   firstCard = 0;
+//   secondCard = 0;
+//   shuffle();
+// }
