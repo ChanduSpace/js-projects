@@ -38,6 +38,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
+  perspective: 500px;
 }
 .card {
   display: flex;
