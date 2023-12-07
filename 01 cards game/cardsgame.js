@@ -2,6 +2,7 @@ let cards = document.querySelectorAll(".card");
 let playButton = document.querySelector(".play-button");
 let cardsContainer = document.querySelector(".cards-container");
 let resetButton = document.querySelector(".reset-button");
+let doneText = document.querySelector(".done-text");
 
 let isFirst = true;
 let firstCard;
@@ -25,6 +26,23 @@ function check() {
   if (firstCard.dataset.image === secondCard.dataset.image) {
     firstCard.removeEventListener("click", flip);
     secondCard.removeEventListener("click", flip);
+
+    let gameStatus = [];
+    cards.forEach((c) => {
+      let a = c.classList.contains("flip");
+      if (a) {
+        gameStatus.push(a);
+      } else {
+        gameStatus.push(false);
+      }
+    });
+
+    if (!gameStatus.includes(false)) {
+      setTimeout(() => {
+        doneText.classList.remove("play");
+      }, 1000);
+    }
+
     isFirst = true;
     firstCard = 0;
     secondCard = 0;
@@ -105,6 +123,7 @@ function reset() {
   cards.forEach((c) => {
     c.classList.remove("flip");
   });
+  doneText.classList.add("play");
   isFirst = true;
   firstCard = 0;
   secondCard = 0;

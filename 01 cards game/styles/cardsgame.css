@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,4 +173,11 @@ img {
   -moz-transform: scale(0.97);
   -ms-transform: scale(0.97);
   -o-transform: scale(0.97);
+}
+.done-text {
+  position: absolute;
+  font-family: "Press Start 2P";
+  color: beige;
+  letter-spacing: 4px;
+  z-index: 1;
 }
