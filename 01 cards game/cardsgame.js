@@ -1,9 +1,7 @@
-let cards = [];
-cards = document.querySelectorAll(".card");
+let cards = document.querySelectorAll(".card");
 let playButton = document.querySelector(".play-button");
 let cardsContainer = document.querySelector(".cards-container");
-
-console.log(cards);
+let resetButton = document.querySelector(".reset-button");
 
 let isFirst = true;
 let firstCard;
@@ -45,20 +43,70 @@ function playClicked() {
   playButton.classList.add("play");
   playButton.classList.remove("play-button");
   cardsContainer.classList.remove("play");
+  resetButton.classList.remove("play");
 }
+
+// function shuffle() {
+//   let usedNum = [];
+//   cards.forEach((c) => {
+//     var num = Math.floor(Math.random() * cards.length);
+
+//     if (!usedNum.includes(num)) {
+//       usedNum.push(num);
+//       c.style.order = num;
+//     }
+//     console.log(usedNum);
+//   });
+// }
+
+////aads*************************************************8///////////
 
 function shuffle() {
+  let usedNum = [];
+  let element = 1;
   cards.forEach((c) => {
-    var num = Math.floor(Math.random() * 20);
-    c.Style.order = num;
+    while (element > usedNum.length) {
+      var num = Math.floor(Math.random() * cards.length);
+      if (!usedNum.includes(num)) {
+        usedNum.push(num);
+        c.style.order = num;
+      }
+    }
+    element++;
   });
 }
-
 shuffle();
 
-// function reset() {
-//   isFirst = true;
-//   firstCard = 0;
-//   secondCard = 0;
-//   shuffle();
+////k *************************************************???????////////
+
+// function shuffle() {
+//   let usedNum = [];
+//   for (let i = 0; i < cards.length; i++) {
+//     var num = Math.floor(Math.random() * cards.length);
+//     console.log(num);
+
+//     if (!usedNum.includes(num)) {
+//       usedNum.push(num);
+//       //   c.style.order = num;
+//     } else {
+//       i--;
+//     }
+//     console.log(usedNum);
+//   }
 // }
+
+// cards.forEach((c) => {
+//   console.log(c.classList.contains("flip"));
+// });
+
+////k *************************************************???????////////
+
+function reset() {
+  cards.forEach((c) => {
+    c.classList.remove("flip");
+  });
+  isFirst = true;
+  firstCard = 0;
+  secondCard = 0;
+  shuffle();
+}

@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
   height: 100vh;
   width: 100vw;
   background: linear-gradient(rgb(40, 40, 40), rgb(61, 61, 61));
@@ -26,8 +26,7 @@ body {
 .heading .span-2 {
   padding: 8px 8px;
   background-color: beige;
-  color: rgb(40, 40, 40);
-  mix-blend-mode: screen;
+  color: rgb(58, 58, 58);
 }
 .cards-container {
   height: 60vh;
@@ -37,7 +36,14 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  transition: all 1s;
   perspective: 500px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
 }
 .card {
   display: flex;
@@ -49,11 +55,11 @@ body {
   border-radius: 4px;
   position: relative;
   transform-style: preserve-3d;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -81,12 +87,19 @@ img {
   -o-transform: rotateY(180deg);
 }
 .play {
-  display: none;
+  height: 0;
+  width: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
 }
 .play-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 15px;
 }
 .play-button button {
   padding: 10px;
@@ -128,12 +141,12 @@ img {
   margin-top: 16px;
 }
 .reset-button {
-  padding: 6px;
+  padding: 8px 16px;
   border-radius: 6px;
   font-family: "Press Start 2P";
   font-size: 16px;
   border: none;
-  margin-top: 16px;
+  margin-top: -14px;
   transition: all 0.15s ease;
   background-color: beige;
   color: rgb(50, 50, 50);
