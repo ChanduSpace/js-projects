@@ -122,6 +122,7 @@ shuffle();
 function reset() {
   cards.forEach((c) => {
     c.classList.remove("flip");
+    c.addEventListener("click", flip);
   });
   doneText.classList.add("play");
   isFirst = true;
