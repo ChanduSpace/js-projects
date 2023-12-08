@@ -3,6 +3,7 @@ let playButton = document.querySelector(".play-button");
 let cardsContainer = document.querySelector(".cards-container");
 let resetButton = document.querySelector(".reset-button");
 let doneText = document.querySelector(".done-text");
+let heading = document.querySelector(".heading");
 
 let isFirst = true;
 let firstCard;
@@ -62,6 +63,7 @@ function playClicked() {
   playButton.classList.remove("play-button");
   cardsContainer.classList.remove("play");
   resetButton.classList.remove("play");
+  heading.classList.add("move-up");
 }
 
 // function shuffle() {

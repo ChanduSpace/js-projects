@@ -148,17 +148,17 @@ img {
   font-size: 16px;
   border: none;
   margin-top: -14px;
-  transition: all 0.15s ease;
+  transition: all 1s;
   background-color: beige;
   color: rgb(50, 50, 50);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-  -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -ms-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
 }
 .reset-button:hover {
   transform: scale(1.03);
@@ -180,4 +180,44 @@ img {
   color: beige;
   letter-spacing: 4px;
   z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .heading {
+    position: absolute;
+    font-size: 16px;
+    top: 140px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+  }
+  .play-button {
+    position: absolute;
+    top: 190px;
+  }
+  .play-button p {
+    font-size: 10px;
+    line-height: 22px;
+    text-wrap: wrap;
+    text-align: center;
+    width: 250px;
+  }
+  .play-button button {
+    font-size: 16px;
+  }
+  .cards-container {
+    width: 280px;
+    height: 280px;
+  }
+  .card img {
+    height: 38px;
+  }
+  .reset-button {
+    margin-top: 60px;
+  }
+  .move-up {
+    top: 35px;
+  }
 }
