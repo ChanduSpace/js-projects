@@ -185,6 +185,7 @@ img {
 @media screen and (max-width: 767px) {
   body {
     justify-content: left;
+    height: 90vh;
   }
   .heading {
     position: absolute;
@@ -213,12 +214,13 @@ img {
   .cards-container {
     width: 90%;
     height: 280px;
+    margin-top: 65px;
   }
   .card img {
     height: 38px;
   }
   .reset-button {
-    margin-top: 60px;
+    margin-top: 0px;
   }
   .move-up {
     top: 35px;
