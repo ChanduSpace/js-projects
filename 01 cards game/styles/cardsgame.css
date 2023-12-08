@@ -183,6 +183,9 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  body {
+    justify-content: left;
+  }
   .heading {
     position: absolute;
     font-size: 16px;
@@ -208,7 +211,7 @@ img {
     font-size: 16px;
   }
   .cards-container {
-    width: 100%;
+    width: 90%;
     height: 280px;
   }
   .card img {
