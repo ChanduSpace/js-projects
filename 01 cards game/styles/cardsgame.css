@@ -225,4 +225,8 @@ img {
   .move-up {
     top: 35px;
   }
+  .done-text {
+    top: 205px;
+    font-size: 20px;
+  }
 }
