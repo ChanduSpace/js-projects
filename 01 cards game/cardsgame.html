@@ -13,7 +13,9 @@
     />
   </head>
   <body>
-    <h1 class="done-text play">YOU'RE DONE!</h1>
+    <h1 class="done-text play">
+      YOU DONE IT IN <br /><span class="end-score">0</span> MOVES
+    </h1>
     <h1 class="heading">
       <span class="span-1">MEMORY</span><span class="span-2">GAME</span>
     </h1>
@@ -104,7 +106,11 @@
         <img src="./pics/logo2.png" class="back" alt="" />
       </div>
     </div>
-    <button class="reset-button play" onclick="reset()">RESET</button>
+    <div>
+      <button class="reset-button play" onclick="reset()">RESET</button>
+      <p class="score play">MOVES:<span class="moves">0</span></p>
+    </div>
+
     <script src="./cardsgame.js"></script>
   </body>
 </html>

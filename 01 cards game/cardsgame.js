@@ -4,10 +4,14 @@ let cardsContainer = document.querySelector(".cards-container");
 let resetButton = document.querySelector(".reset-button");
 let doneText = document.querySelector(".done-text");
 let heading = document.querySelector(".heading");
+let score = document.querySelector(".score");
+let moves = document.querySelector(".moves");
+let endScore = document.querySelector(".end-score");
 
 let isFirst = true;
 let firstCard;
 let secondCard;
+moves.innerText = 0;
 
 cards.forEach((c) => {
   c.addEventListener("click", flip);
@@ -15,6 +19,7 @@ cards.forEach((c) => {
 
 function flip() {
   this.classList.add("flip");
+  moves.innerText = parseInt(moves.innerText) + 1;
   if (isFirst) {
     isFirst = false;
     firstCard = this;
@@ -39,6 +44,7 @@ function check() {
     });
 
     if (!gameStatus.includes(false)) {
+      endScore.innerText = moves.innerText;
       setTimeout(() => {
         doneText.classList.remove("play");
       }, 1000);
@@ -63,6 +69,7 @@ function playClicked() {
   playButton.classList.remove("play-button");
   cardsContainer.classList.remove("play");
   resetButton.classList.remove("play");
+  score.classList.remove("play");
   heading.classList.add("move-up");
 }
 
@@ -126,6 +133,7 @@ function reset() {
     c.classList.remove("flip");
     c.addEventListener("click", flip);
   });
+  moves.innerText = 0;
   doneText.classList.add("play");
   isFirst = true;
   firstCard = 0;
