@@ -1,0 +1,55 @@
+.right-section {
+  /* background-color: brown; */
+  width: 55rem;
+  height: 35rem;
+}
+.all-day-container {
+  display: flex;
+  width: 100%;
+  height: 22%;
+  padding: 10px 0;
+  margin-bottom: 4px;
+  /* background-color: pink; */
+}
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  padding: 4px;
+  border-right: 1px solid rgb(115, 146, 182);
+}
+.hour p {
+  font-size: 13px;
+}
+.hour-img {
+  width: 50%;
+}
+.hour-img img {
+  width: 100%;
+}
+.all-week-container {
+  display: flex;
+  width: 100%;
+  height: 22%;
+  padding: 10px 0;
+  /* background-color: skyblue; */
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  padding: 4px;
+  border-right: 1px solid rgb(115, 146, 182);
+}
+.day p {
+  font-size: 13px;
+}
+.hour-img {
+  width: 50%;
+}
+.hour-img img {
+  width: 100%;
+}
