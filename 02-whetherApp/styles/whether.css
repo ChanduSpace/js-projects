@@ -90,6 +90,8 @@ section {
 }
 .img-container .main-png {
   width: 100%;
+  /* filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.497)); */
+  /* -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.497)); */
 }
 .temp h1 {
   font-size: 6rem;
@@ -97,6 +99,8 @@ section {
   letter-spacing: -5px;
   margin-top: 1.5rem;
   margin-bottom: -20px;
+  /* filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.518));
+  -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.518)); */
 }
 .temp h1 span {
   font-size: 4rem;

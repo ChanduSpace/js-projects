@@ -1,0 +1,138 @@
+.wind-humidity {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 44%;
+  width: 99.4%;
+  margin-left: 2px;
+  background-color: rgba(41, 82, 124, 0.578);
+  filter: opacity(0.8);
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.544);
+  border-radius: 1rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  -webkit-filter: opacity(0.8);
+}
+.humidity-container {
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid rgba(135, 207, 235, 0.398);
+}
+.humidity-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.humididy-progress-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 12rem;
+  width: 50%;
+  /* background-color: beige; */
+}
+.humidity-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  height: 12rem;
+  width: 50%;
+  letter-spacing: 1px;
+  line-height: 36px;
+  /* background-color: blueviolet; */
+}
+.wind-container {
+  width: 50%;
+  height: 100%;
+  padding: 0 1rem;
+}
+.progress-bar {
+  /* background-color: purple; */
+  height: 9rem;
+  width: 9rem;
+}
+.outer-svg {
+  position: relative;
+  height: 144px;
+  width: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(133deg);
+  -webkit-transform: rotate(133deg);
+  -moz-transform: rotate(133deg);
+  -ms-transform: rotate(133deg);
+  -o-transform: rotate(133deg);
+}
+.outer-circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke: rgba(135, 207, 235, 0.398);
+  stroke-width: 14px;
+  stroke-dasharray: 278;
+}
+.inner-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(133deg);
+}
+.inner-circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 10px;
+  stroke-dasharray: 200;
+}
+.humidity-value {
+  position: absolute;
+  top: 92px;
+  left: 92px;
+}
+.O {
+  position: absolute;
+  top: 160px;
+  left: 60px;
+  font-size: 13px;
+}
+.IOO {
+  position: absolute;
+  top: 160px;
+  left: 126px;
+  font-size: 13px;
+}
+.humidity-info-container p {
+  margin-left: 16px;
+  color: rgb(165, 206, 222);
+}
+.humidity-info-container p span {
+  color: white;
+}
+.wind-img-info-container {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-top: 24px;
+}
+.wind-img {
+  height: 100%;
+}
+.wind-img img {
+  height: 10rem;
+}
+.wind-info {
+  letter-spacing: 1px;
+  line-height: 36px;
+}
+.wind-info p {
+  margin-left: 16px;
+  color: rgb(165, 206, 222);
+}
