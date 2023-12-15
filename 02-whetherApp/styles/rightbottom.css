@@ -151,7 +151,7 @@
   bottom: 47px;
   left: 0px;
   animation: rotate 100s linear;
-  -webkit-animation: rotate 100s linear;
+  -webkit-animation: rotate 100s linear infinite;
 }
 
 .small-windmill {
@@ -171,7 +171,7 @@
   bottom: 39px;
   left: 65px;
   animation: rotate 140s linear;
-  -webkit-animation: rotate 140s linear;
+  -webkit-animation: rotate 140s linear infinite;
 }
 
 @keyframes rotate {
