@@ -163,12 +163,20 @@ section {
 .rise-time {
   position: absolute;
   left: 0;
-  bottom: 16px;
+  bottom: 4px;
+  line-height: 16px;
+}
+.rise-time span {
+  font-size: 10px;
 }
 .set-time {
   position: absolute;
   right: 0;
-  bottom: 16px;
+  bottom: 4px;
+  line-height: 16px;
+}
+.set-time span {
+  font-size: 10px;
 }
 .sun-base {
   position: relative;
