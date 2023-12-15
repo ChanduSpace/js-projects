@@ -77,7 +77,7 @@
   stroke-linecap: round;
   stroke: rgba(135, 207, 235, 0.398);
   stroke-width: 14px;
-  stroke-dasharray: 278;
+  stroke-dasharray: 278px;
 }
 .inner-svg {
   position: absolute;
@@ -90,7 +90,7 @@
   stroke-linecap: round;
   stroke: rgb(255, 255, 255);
   stroke-width: 10px;
-  stroke-dasharray: 200;
+  stroke-dasharray: 200px 360px;
 }
 .humidity-value {
   position: absolute;

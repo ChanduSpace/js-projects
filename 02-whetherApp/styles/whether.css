@@ -20,6 +20,8 @@ header {
   display: flex;
   gap: 3rem;
   width: 100vw;
+  padding-left: 30px;
+  justify-content: space-around;
 }
 .search-div {
   display: flex;
@@ -133,26 +135,68 @@ section {
   margin-right: 1rem;
   font-size: 2rem;
 }
+.date,
+.location {
+  display: flex;
+  align-items: center;
+}
+.date img,
+.location img {
+  height: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  filter: invert();
+  -webkit-filter: invert();
+}
+.location img {
+  margin-left: 2px;
+  margin-right: 29px;
+}
+
 .sun-container {
+  position: relative;
   height: 9.5rem;
   width: 25rem;
-  /* background-color: pink; */
   padding: 1rem;
   padding-bottom: 2rem;
+}
+.rise-time {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+}
+.set-time {
+  position: absolute;
+  right: 0;
+  bottom: 16px;
 }
 .sun-base {
   position: relative;
   height: 100%;
   width: 100%;
-  /* background-color: skyblue; */
 }
-.path-img {
-  height: 100%;
-  width: 100%;
+.path-svg {
+  height: 104px;
+  width: 368px;
 }
-.msun-img {
-  position: absolute;
-  height: 50%;
-  bottom: 50%;
-  left: 50%;
+.path-ellipse {
+  cx: 184px;
+  cy: 124px;
+  rx: 200px;
+  ry: 91px;
+  fill: none;
+  stroke: rgb(185, 205, 212);
+  stroke-width: 2px;
+  stroke-dasharray: 10px 5px;
+}
+.sun-ellipse {
+  cx: 184px;
+  cy: 124px;
+  rx: 200px;
+  ry: 91px;
+  fill: none;
+  stroke: yellow;
+  stroke-width: 40px;
+  stroke-dasharray: 0px 600px; /*480px start 920 end*/
+  stroke-linecap: round;
 }
