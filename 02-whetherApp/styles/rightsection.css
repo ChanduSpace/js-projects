@@ -8,12 +8,13 @@
   height: 22%;
   padding: 10px 0;
   margin-bottom: 4px;
+  overflow-x: auto;
 }
 .hour {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 10%;
+  min-width: 88px;
   padding: 4px;
   border-right: 1px solid rgb(115, 146, 182);
 }
@@ -40,6 +41,7 @@
   flex-direction: column;
   align-items: center;
   width: 10%;
+  min-width: 88px;
   padding: 4px;
   border-right: 1px solid rgb(115, 146, 182);
 }

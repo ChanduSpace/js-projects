@@ -7,13 +7,13 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
   color: aliceblue;
+  overflow: hidden;
 }
 body {
   background: linear-gradient(rgb(65, 125, 184), rgb(90, 90, 132));
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   padding: 0.5rem 1rem;
 }
 header {
@@ -35,6 +35,7 @@ header {
   border: none;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  outline: none;
 }
 .search-button {
   height: 2.3rem;

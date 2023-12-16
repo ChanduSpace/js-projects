@@ -1,0 +1,35 @@
+@media screen and (max-width: 767px) {
+  * {
+    overflow: visible;
+  }
+  body {
+    background: linear-gradient(rgb(65, 125, 184), rgb(90, 90, 132));
+    padding: 0;
+  }
+  section {
+    flex-direction: column;
+  }
+  .wind-humidity {
+    flex-direction: column;
+    width: 25rem;
+  }
+  .humidity-container {
+    border-right: 0px;
+  }
+  .wind-img-info-container {
+    width: 100%;
+  }
+  .path-svg {
+    height: 104px;
+    width: 368px;
+    overflow-y: hidden;
+  }
+  .right-section {
+    width: 25rem;
+    height: auto;
+  }
+  .all-week-container {
+    width: 25rem;
+    overflow-x: auto;
+  }
+}

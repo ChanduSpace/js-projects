@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 44%;
-  width: 99.4%;
+  /* height: 44%; */
+  /* width: 874.64px; */
   margin-left: 2px;
   background-color: rgba(41, 82, 124, 0.578);
   filter: opacity(0.8);
@@ -19,7 +19,7 @@
   -webkit-filter: opacity(0.8);
 }
 .humidity-container {
-  width: 50%;
+  width: 390px;
   height: 100%;
   border-right: 1px solid rgba(135, 207, 235, 0.398);
 }
@@ -50,7 +50,7 @@
   /* background-color: blueviolet; */
 }
 .wind-container {
-  width: 50%;
+  width: 419px;
   height: 100%;
   padding: 0 1rem;
 }
@@ -95,12 +95,12 @@
 .humidity-value {
   position: absolute;
   top: 92px;
-  left: 92px;
+  left: 82px;
 }
 .O {
   position: absolute;
   top: 160px;
-  left: 60px;
+  left: 54px;
   font-size: 13px;
 }
 .IOO {
@@ -151,7 +151,7 @@
   bottom: 47px;
   left: 0px;
   animation: rotate 100s linear;
-  -webkit-animation: rotate 100s linear infinite;
+  -webkit-animation: rotate 30s linear infinite;
 }
 
 .small-windmill {
@@ -171,7 +171,7 @@
   bottom: 39px;
   left: 65px;
   animation: rotate 140s linear;
-  -webkit-animation: rotate 140s linear infinite;
+  -webkit-animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {
