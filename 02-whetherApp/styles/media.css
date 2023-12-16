@@ -32,4 +32,23 @@
     width: 25rem;
     overflow-x: auto;
   }
+  header h1 {
+    font-size: 28px;
+  }
+  header {
+    padding-top: 0.5rem;
+    padding-left: 6.5rem;
+    gap: 1rem;
+    justify-content: center;
+    width: 100vw;
+  }
+  .input-box {
+    width: 10rem;
+  }
+  .search-div {
+    width: 15rem;
+  }
+  .search-button {
+    width: 3rem;
+  }
 }
