@@ -36,6 +36,8 @@ header {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   outline: none;
+  color: black;
+  padding-left: 10px;
 }
 .search-button {
   height: 2.3rem;
