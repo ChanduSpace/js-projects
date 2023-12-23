@@ -1,6 +1,10 @@
 :root {
   --first-color: rgb(65, 125, 184);
   --second-color: rgb(90, 90, 132);
+  --sun-position: 70;
+  --humidity: 80;
+
+  /* ((20px * 274px)/100); */
 }
 * {
   padding: 0;
@@ -58,8 +62,10 @@ section {
 .left-section {
   display: inline-block;
   width: 25rem;
+  perspective: 1000px;
 }
 .main-container {
+  transition: all 0.5s ease-in-out;
   height: 25rem;
   width: 25rem;
   background-color: rgba(41, 82, 124, 0.578);
@@ -74,7 +80,12 @@ section {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   -webkit-filter: opacity(0.8);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
+
 .temp-and-img {
   display: flex;
   gap: 0.3rem;
@@ -208,6 +219,27 @@ section {
   fill: none;
   stroke: yellow;
   stroke-width: 40px;
-  stroke-dasharray: 0px 600px; /*480px start 920 end*/
+  stroke-dasharray: 0px calc((var(--sun-position) * 440px / 100) + 480px);
+  /*480pxstart920pxend second variable*/
   stroke-linecap: round;
+  animation: progress 2s ease-in-out;
+  -webkit-animation: progress 2s ease-in-out;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0px 480px;
+  }
+  100% {
+    stroke-dasharray: 0px calc((var(--sun-position) * 440px / 100) + 480px);
+  }
+}
+
+@keyframes humidity-progress {
+  0% {
+    stroke-dasharray: 4px 360px;
+  }
+  100% {
+    stroke-dasharray: calc((var(--humidity) * 274px / 100) + 4px) 360px;
+  }
 }

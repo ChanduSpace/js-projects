@@ -90,7 +90,9 @@
   stroke-linecap: round;
   stroke: rgb(255, 255, 255);
   stroke-width: 10px;
-  stroke-dasharray: 200px 360px;
+  stroke-dasharray: calc((var(--humidity) * 274px / 100) + 4px) 360px;
+  /*4pxstart278pxendfirstvariable*/
+  animation: humidity-progress 2s ease-in-out;
 }
 .humidity-value {
   position: absolute;
