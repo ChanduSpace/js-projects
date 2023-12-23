@@ -7,6 +7,7 @@ async function updateWeather(city) {
   let data = await response.json();
   let temp = data.main.temp;
   console.log(data);
+  document.querySelector(".inner-circle").classList.add("ani");
   document.querySelector(".temp h1").innerHTML =
     Math.round(temp) + "°<span>c</span>";
   document.querySelector(".main").innerHTML = data.weather[0].description;
@@ -18,5 +19,7 @@ async function updateWeather(city) {
 }
 
 document.querySelector(".search-button").addEventListener("click", () => {
+  document.querySelector(".main-container").classList.toggle("ani-flip");
+  document.querySelector(".inner-circle").classList.remove("ani");
   updateWeather(document.querySelector(".input-box").value);
 });

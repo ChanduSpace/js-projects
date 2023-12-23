@@ -92,7 +92,10 @@
   stroke-width: 10px;
   stroke-dasharray: calc((var(--humidity) * 274px / 100) + 4px) 360px;
   /*4pxstart278pxendfirstvariable*/
-  animation: humidity-progress 2s ease-in-out;
+}
+.ani {
+  animation: humidity-progress 1.5s ease-in-out;
+  -webkit-animation: humidity-progress 1.5s ease-in-out;
 }
 .humidity-value {
   position: absolute;
