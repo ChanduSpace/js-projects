@@ -225,10 +225,11 @@ section {
   stroke-dasharray: 0px calc((var(--sun-position) * 440px / 100) + 480px);
   /*480pxstart920pxend second variable*/
   stroke-linecap: round;
+}
+.ani-progress {
   animation: progress 2s ease-in-out;
   -webkit-animation: progress 2s ease-in-out;
 }
-
 @keyframes progress {
   0% {
     stroke-dasharray: 0px 480px;
