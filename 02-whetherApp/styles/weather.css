@@ -50,6 +50,13 @@ header {
   border-bottom-right-radius: 1rem;
   border: none;
   padding-top: 4px;
+  outline: none;
+}
+.search-button:hover {
+  opacity: 0.8;
+}
+.search-button:active {
+  opacity: 0.6;
 }
 .search-png {
   height: 1.5rem;
@@ -65,7 +72,8 @@ section {
   perspective: 1000px;
 }
 .main-container {
-  transition: all 0.5s ease-in-out;
+  position: relative;
+  transition: all 1s ease-in-out;
   height: 25rem;
   width: 25rem;
   background-color: rgba(41, 82, 124, 0.578);
@@ -80,10 +88,15 @@ section {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   -webkit-filter: opacity(0.8);
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+.main-wrapper {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .ani-flip {
   transform: rotateY(360deg);
