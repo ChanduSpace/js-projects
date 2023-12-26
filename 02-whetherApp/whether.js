@@ -42,6 +42,22 @@ function dtToTime(dt, timezone) {
   let time = new Date((dt + timezone) * 1000);
   return `${time.getUTCHours()}:${time.getUTCMinutes()}`;
 }
+let img;
+let main;
+function mainImageFunction() {
+  if (main == "Clear") {
+    img = "clear";
+  } else if (main == "Clouds") {
+    img = "cloudy";
+  } else if (main == "Rain") {
+    img = "rain";
+  } else if (main == "Mist") {
+    img = "sunny";
+  } else if (main == "Drizzle") {
+    img = "drizzle";
+  }
+  return `pics/${img}.png`;
+}
 
 async function updateWeather(city) {
   let response = await fetch(weatherUrl + city + apiKey);
@@ -73,6 +89,9 @@ async function updateWeather(city) {
   document.querySelector(".temp h1").innerHTML =
     Math.round(temp) + "°<span>c</span>";
   document.querySelector(".main").innerHTML = data.weather[0].description;
+  main = data.weather[0].main;
+  let mainImgPath = mainImageFunction();
+  console.log(mainImgPath);
 
   document.querySelector(".date p").innerHTML = month + " " + date + ", " + day;
   console.log(month + " " + date + ", " + day);
@@ -91,8 +110,8 @@ async function updateWeather(city) {
   }
   let sunriseTime = dtToTime(sunrise, timezone);
   let sunsetTime = dtToTime(sunset, timezone);
-  document.querySelector(".rise-time").innerHTML = sunriseTime;
-  document.querySelector(".set-time").innerHTML = sunsetTime;
+  document.querySelector(".rise").innerHTML = sunriseTime;
+  document.querySelector(".set").innerHTML = sunsetTime;
 
   document.querySelector(".humidity-value").innerHTML =
     data.main.humidity + "%";

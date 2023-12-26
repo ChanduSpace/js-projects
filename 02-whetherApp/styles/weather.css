@@ -196,8 +196,12 @@ section {
   bottom: 4px;
   line-height: 16px;
 }
-.rise-time span {
+.rise-time .pre {
   font-size: 10px;
+}
+.rise,
+.set {
+  font-size: 16px;
 }
 .set-time {
   position: absolute;
@@ -205,7 +209,7 @@ section {
   bottom: 4px;
   line-height: 16px;
 }
-.set-time span {
+.set-time .pre {
   font-size: 10px;
 }
 .sun-base {
