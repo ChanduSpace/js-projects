@@ -1,5 +1,8 @@
 let weatherUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+let forecastUrl =
+  "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
 let apiKey = "&appid=2918d2bb3af32e91e128131a83c301e7";
 
 let uviUrl = "https://currentuvindex.com/api/v1/uvi?";
@@ -23,7 +26,7 @@ let monthArray = [
   "Nov",
   "Dec",
 ];
-let dayArray = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let dayArray = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
 function dateTime(zone, d) {
   let dateAndTime = new Date((d + zone) * 1000);
@@ -59,6 +62,28 @@ function mainImageFunction() {
   return `pics/${img}.png`;
 }
 
+function all_day_main_function(main) {
+  if (main == "Clear") {
+    img = "clear";
+  } else if (main == "Clouds") {
+    img = "cloudy";
+  } else if (main == "Rain") {
+    img = "rain";
+  } else if (main == "Mist") {
+    img = "sunny";
+  } else if (main == "Drizzle") {
+    img = "drizzle";
+  }
+  return `pics/${img}.png`;
+}
+
+function dt_to_date(dt, timezone) {
+  let time = new Date((dt + timezone) * 1000);
+  return `${monthArray[time.getUTCMonth()]} ${time.getUTCDate()}, ${
+    dayArray[time.getUTCDay()]
+  }`;
+}
+
 async function updateWeather(city) {
   let response = await fetch(weatherUrl + city + apiKey);
   let data = await response.json();
@@ -70,6 +95,9 @@ async function updateWeather(city) {
   );
   let uviData = await uviResponse.json();
   console.log(uviData);
+  let forecastResponse = await fetch(forecastUrl + city + apiKey);
+  let forecastData = await forecastResponse.json();
+  console.log(forecastData);
 
   //////////////////////////////////////////////////////////
   //   let timeResponse = await fetch(
@@ -91,8 +119,7 @@ async function updateWeather(city) {
   document.querySelector(".main").innerHTML = data.weather[0].description;
   main = data.weather[0].main;
   let mainImgPath = mainImageFunction();
-  console.log(mainImgPath);
-
+  document.querySelector(".main-png").src = mainImgPath;
   document.querySelector(".date p").innerHTML = month + " " + date + ", " + day;
   console.log(month + " " + date + ", " + day);
   document.querySelector(".location p").innerHTML = data.name;
@@ -143,6 +170,49 @@ async function updateWeather(city) {
     data.main.feels_like
   );
   document.querySelector(".uvi").innerHTML = uviData.now.uvi;
+
+  //////////////   hourly forecast    /////////////////
+  let allDayContainer = document.querySelector(".all-day-container");
+  allDayContainer.innerHTML = "";
+
+  for (a = 0; a < 8; a++) {
+    let allDayTimezone = forecastData.city.timezone;
+    let allDaydt = forecastData.list[a].dt;
+    let all_day_time = dtToTime(allDaydt, allDayTimezone);
+    let all_day_main = forecastData.list[a].weather[0].main;
+    let all_day_main_path = all_day_main_function(all_day_main);
+    let all_day_temp = Math.round(forecastData.list[a].main.temp);
+
+    let hourDiv = document.createElement("div");
+    hourDiv.classList.add("hour");
+    allDayContainer.appendChild(hourDiv);
+    hourDiv.innerHTML = `<p>${all_day_time}</p>
+      <div class="hour-img">
+      <img src="${all_day_main_path}" alt="" />
+      </div>
+      <p class="hour-temp">${all_day_temp}°c</p>`;
+  }
+
+  /////////////     daily forecast    ////////////////////
+  let all_week_container = document.querySelector(".all-week-container");
+  all_week_container.innerHTML = "";
+  for (b = 0; b < 40; b += 8) {
+    let all_week_timezone = forecastData.city.timezone;
+    let all_week_dt = forecastData.list[b].dt;
+    let all_week_date = dt_to_date(all_week_dt, all_week_timezone);
+    let all_week_main = forecastData.list[b].weather[0].main;
+    let all_week_main_path = all_day_main_function(all_week_main);
+    let all_week_temp = Math.round(forecastData.list[b].main.temp);
+
+    let dayDiv = document.createElement("div");
+    dayDiv.classList.add("day");
+    all_week_container.appendChild(dayDiv);
+    dayDiv.innerHTML = `<p>${all_week_date}</p>
+     <div class="hour-img">
+      <img src="${all_week_main_path}" alt="" />
+     </div>
+     <p class="hour-temp">${all_week_temp}°c</p>`;
+  }
 }
 
 document.querySelector(".search-button").addEventListener("click", () => {
