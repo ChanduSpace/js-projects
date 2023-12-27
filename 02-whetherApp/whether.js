@@ -87,17 +87,14 @@ function dt_to_date(dt, timezone) {
 async function updateWeather(city) {
   let response = await fetch(weatherUrl + city + apiKey);
   let data = await response.json();
-  console.log(data);
   let lat = data.coord.lat;
   let lon = data.coord.lon;
   let uviResponse = await fetch(
     uviUrl + "latitude=" + lat + "&longitude=" + lon
   );
   let uviData = await uviResponse.json();
-  console.log(uviData);
   let forecastResponse = await fetch(forecastUrl + city + apiKey);
   let forecastData = await forecastResponse.json();
-  console.log(forecastData);
 
   //////////////////////////////////////////////////////////
   //   let timeResponse = await fetch(
@@ -121,7 +118,6 @@ async function updateWeather(city) {
   let mainImgPath = mainImageFunction();
   document.querySelector(".main-png").src = mainImgPath;
   document.querySelector(".date p").innerHTML = month + " " + date + ", " + day;
-  console.log(month + " " + date + ", " + day);
   document.querySelector(".location p").innerHTML = data.name;
   document.querySelector(".time p").innerHTML = hour + ":" + minutes;
 
